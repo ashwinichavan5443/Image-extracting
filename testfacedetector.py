@@ -31,10 +31,10 @@ def cap_face():
         cv2.rectangle(gray, (x, y), (x + w, y + h), (250, 0, 255), 2)
         roi_image = gray[y:y + h, x:x + w]
 #write image in specified folder
-    path = '/home/hp/PycharmProjects/testopencv/database'
-    cv2.imwrite(os.path.join(path, 'image' + '2' + '.png'), roi_image)
+    path = os.getcwd() + '/database'
+    cv2.imwrite(os.path.join(path, 'new' + '3' + '.png'), roi_image)
    
-    msg = messagebox.showinfo('face detector', "image store successfully")
+    msg = messagebox.showinfo('face detector', "Image Stored Successfully")
     del camera
 
 
